@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+    background-color: #eee;
+}
+
+.personal_photo {
+    border-radius: 50%;
+}
+
+nav {
+    display: grid;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 3%;
+}
+
+nav, .logo, .social-media, .social-media div, .social-media div a {
+    background-color: #047785;
+    color: #eee;
+}
+
+.logo, .social-media {
+    margin: 1%;
+}
+
+.logo {
+    font-size: 1.5em;
+}
+
+.social-media .key {
+    font-size: 1.2em;
+    border: 1px double #eee;
+    padding: 0.2%;
+    text-align: center;
+}
+
+.links {
+    display: none;
+}
+
+.social-media:hover .links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1em;
+}
+
+.links a:hover {
+    background-color: #034149;
+}
+
+.links a {
+    padding: 5%;
+    margin: 2%;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.skills p, .skills h2 {
+    background-color: #dbdbdb;
+    color:#047785;
+}
+
+.skills p {
+    font-size: 20px;
+}
+
+.skills {
+    background-color: #dbdbdb;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2%;
+    padding: 2%;
+    /* box-shadow: 2% yellow; */
+}
+
+.main_section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* technologies */
+
+.technologies {
+    padding: 2%; margin: 2%;
+}
+
+.technologies img {
+    margin: 1%;
+    border: 1px black solid;
+}
+
+.technologies div {
+    margin: 2%;
+    background-color: #dbdbdb;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.technologies h3 {
+    text-align: center;
+    font-size: 28px;
+}
+
+/* footer */
