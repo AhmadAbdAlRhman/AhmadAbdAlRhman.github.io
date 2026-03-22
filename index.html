@@ -2,136 +2,112 @@
 <html lang="ar" dir="rtl">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>أحمد حاج نجيب | مطور Backend</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 
   <style>
     body {
-      font-family: 'Segoe UI', system-ui, sans-serif;
+      font-family: "Segoe UI", system-ui, sans-serif;
       overflow-x: hidden;
     }
 
     .glass {
       background: rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
     }
 
     .nav-glass {
-      background: rgba(15, 23, 42, 0.55);
+      background: rgba(8, 15, 35, 0.55);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
     }
 
     .mobile-menu-glass {
-      background: rgba(10, 10, 10, 0.55);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-    }
-
-    .card-hover {
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .card-hover:hover {
-      transform: translateY(-12px) scale(1.03);
-      box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
+      background: rgba(3, 8, 20, 0.78);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
     }
 
     .hero-bg {
-      background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%);
-    }
-
-    .flip-card {
-      perspective: 1000px;
-      height: 150px;
-    }
-
-    .flip-card-inner {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      text-align: center;
-      transition: transform 0.8s;
-      transform-style: preserve-3d;
-    }
-
-    .flip-card:hover .flip-card-inner {
-      transform: rotateY(180deg);
-    }
-
-    .flip-card-front,
-    .flip-card-back {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
-      border-radius: 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .flip-card-back {
-      transform: rotateY(180deg);
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     }
 
     @media (max-width: 768px) {
-      .hero-mobile-title {
-        font-size: 2.2rem;
+      .hero-section {
+        min-height: auto;
+        padding-top: 110px;
+        padding-bottom: 50px;
+      }
+
+      .hero-image {
+        width: 110px;
+        height: 110px;
+        border-width: 4px;
+      }
+
+      .hero-title {
+        font-size: 2.1rem;
         line-height: 1.2;
+        margin-top: 20px;
       }
 
-      .hero-mobile-subtitle {
-        font-size: 1.35rem;
-        line-height: 1.5;
+      .hero-subtitle {
+        font-size: 1.05rem;
+        line-height: 1.8;
+        margin-top: 10px;
       }
 
-      .hero-mobile-text {
-        font-size: 1rem;
+      .hero-text {
+        font-size: 0.95rem;
         line-height: 1.9;
+        margin-top: 18px;
+        padding-inline: 6px;
       }
 
-      .hero-mobile-buttons {
+      .hero-buttons {
         flex-direction: column;
-        gap: 1rem;
-        align-items: center;
+        gap: 14px;
+        margin-top: 28px;
       }
 
-      .hero-mobile-buttons a {
+      .hero-buttons a {
         width: 100%;
-        max-width: 320px;
+        max-width: 260px;
+        margin-inline: auto;
         justify-content: center;
-        padding: 1rem 1.25rem;
+        padding: 14px 18px;
         font-size: 1rem;
+      }
+
+      .section-title {
+        font-size: 2rem;
       }
 
       .mobile-menu-links {
         text-align: right;
-        direction: rtl;
       }
 
       .mobile-menu-links a {
         display: block;
         width: 100%;
+        font-size: 1.05rem;
+        padding: 10px 0;
       }
     }
   </style>
 </head>
 
-<body class="bg-zinc-950 text-white w-full max-w-full">
+<body class="bg-zinc-950 text-white">
 
   <!-- Navbar -->
-  <nav class="fixed top-0 w-full z-50 nav-glass border-b border-white/10">
-    <div class="max-w-6xl mx-auto px-4 md:px-6 py-4 md:py-5 flex justify-between items-center">
+  <nav class="fixed top-0 right-0 left-0 z-50 nav-glass border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 py-4 flex items-center justify-between">
+      <h2 class="text-lg md:text-2xl font-bold text-blue-400 truncate">أحمد حاج نجيب</h2>
 
-      <!-- Logo -->
-      <h2 class="text-lg md:text-2xl font-bold text-blue-400">أحمد حاج نجيب</h2>
-
-      <!-- Desktop Menu -->
       <div class="hidden md:flex gap-8 text-lg">
         <a href="#about" class="hover:text-blue-400 transition">عني</a>
         <a href="#skills" class="hover:text-blue-400 transition">مهاراتي</a>
@@ -139,15 +115,15 @@
         <a href="#contact" class="hover:text-blue-400 transition">تواصل</a>
       </div>
 
-      <!-- Mobile Hamburger -->
       <button id="hamburger" class="md:hidden text-2xl text-white">
         <i class="fas fa-bars"></i>
       </button>
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden mobile-menu-glass border-t border-white/10">
-      <div class="mobile-menu-links flex flex-col py-6 px-6 text-lg space-y-5">
+    <div id="mobile-menu"
+      class="hidden md:hidden absolute top-full right-0 w-full mobile-menu-glass border-t border-white/10 shadow-2xl">
+      <div class="mobile-menu-links px-6 py-5 space-y-2">
         <a href="#about" class="hover:text-blue-400 transition">عني</a>
         <a href="#skills" class="hover:text-blue-400 transition">مهاراتي</a>
         <a href="#projects" class="hover:text-blue-400 transition">مشاريعي</a>
@@ -157,153 +133,89 @@
   </nav>
 
   <!-- Hero -->
-  <section class="hero-bg min-h-screen flex items-center justify-center pt-28 pb-12">
-    <div class="text-center px-4 sm:px-6 max-w-4xl w-full">
-      <img src="./5.jpg"
-        class="w-32 h-32 sm:w-40 sm:h-40 md:w-52 md:h-52 mx-auto rounded-3xl border-4 md:border-8 border-blue-500 shadow-2xl object-cover"
-        alt="أحمد">
+  <section class="hero-section hero-bg min-h-screen flex items-center justify-center">
+    <div class="text-center px-4 max-w-3xl w-full">
+      <img src="./5.jpg" alt="أحمد"
+        class="hero-image w-40 h-40 md:w-52 md:h-52 mx-auto rounded-3xl border-8 border-blue-500 shadow-2xl object-cover" />
 
-      <h1 class="hero-mobile-title text-4xl md:text-6xl font-bold mt-8 tracking-tight">
-        أحمد حاج نجيب
-      </h1>
+      <h1 class="hero-title text-5xl md:text-6xl font-bold mt-8">أحمد حاج نجيب</h1>
 
-      <p class="hero-mobile-subtitle text-xl md:text-3xl text-blue-400 mt-3">
-        مطور Node.js & Backend • مهندس معلوماتية
+      <p class="hero-subtitle text-blue-400 text-2xl md:text-3xl mt-4">
+        Node.js & Backend • مهندس معلوماتية
       </p>
 
-      <p class="hero-mobile-text text-base md:text-xl text-gray-400 mt-6 max-w-2xl mx-auto leading-relaxed">
-        لدي خبرة في بناء أنظمة قوية وتكاملات معقدة.<br>
-        متخصص في الـ APIs، Webhooks، Scraping، وطوابير المهام.
+      <p class="hero-text text-gray-300 text-lg md:text-xl mt-6 leading-relaxed max-w-2xl mx-auto">
+        لدي خبرة في بناء أنظمة قوية وتكاملات معقدة.
+        متخصص في APIs و Webhooks و Scraping وطوابير المهام.
       </p>
 
-      <div class="hero-mobile-buttons mt-10 flex gap-4 md:gap-6 justify-center">
+      <div class="hero-buttons mt-10 flex justify-center gap-5">
         <a href="https://github.com/AhmadAbdAlRhman"
           class="px-8 py-4 bg-white text-black font-bold rounded-2xl hover:bg-blue-400 hover:text-white transition text-lg flex items-center gap-3">
-          <i class="fab fa-github"></i> GitHub
+          <i class="fab fa-github"></i>
+          GitHub
         </a>
 
         <a href="https://www.linkedin.com/in/ahmadhajnajeeb"
-          class="px-8 py-4 border-2 border-white font-bold rounded-2xl hover:bg-white hover:text-black transition text-lg flex items-center gap-3">
-          <i class="fab fa-linkedin"></i> LinkedIn
+          class="px-8 py-4 border-2 border-white font-bold rounded-2xl hover:bg-white hover:text-black transition text-lg flex items-center gap-3 justify-center">
+          <i class="fab fa-linkedin"></i>
+          LinkedIn
         </a>
       </div>
     </div>
   </section>
 
   <!-- About -->
-  <section id="about" class="py-20 md:py-24 bg-black/40">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <h2 class="text-3xl md:text-5xl font-bold text-center mb-10 md:mb-12">من أنا؟</h2>
-      <div class="glass rounded-3xl p-6 md:p-12 text-base md:text-lg leading-8 md:leading-relaxed">
-        Backend Developer with a strong passion for building solid, scalable, and performant systems.
-        Initially explored frontend development, but quickly discovered my true calling in backend engineering,
-        particularly with Node.js and Laravel.
-        I specialize in designing and implementing reliable RESTful APIs, managing complex databases,
-        crafting well-structured ERD diagrams, and ensuring smooth, maintainable system architecture.
-        Eager to join a collaborative and high-performing team where I can contribute to impactful features,
-        deliver high-quality code, and continue growing alongside talented professionals dedicated to
-        creating exceptional software.
+  <section id="about" class="py-20 bg-black/40">
+    <div class="max-w-4xl mx-auto px-4 md:px-6">
+      <h2 class="section-title text-4xl md:text-5xl font-bold text-center mb-10">من أنا؟</h2>
+      <div class="glass rounded-3xl p-6 md:p-10 text-base md:text-lg leading-8">
+        Backend Developer with a strong passion for building solid, scalable, and high-performance systems.
+        I specialize in Node.js and Laravel, building RESTful APIs, handling databases, designing ERD diagrams,
+        and maintaining clean and scalable backend architecture.
       </div>
     </div>
   </section>
 
   <!-- Skills -->
-  <section id="skills" class="py-20 md:py-24">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <h2 class="text-3xl md:text-5xl font-bold text-center mb-12 md:mb-16">المهارات التقنية</h2>
+  <section id="skills" class="py-20">
+    <div class="max-w-6xl mx-auto px-4 md:px-6">
+      <h2 class="section-title text-4xl md:text-5xl font-bold text-center mb-12">المهارات التقنية</h2>
 
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
-
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front glass rounded-3xl overflow-hidden">
-              <img src="./images/backend/node.jpg" class="w-full h-full object-contain p-6 md:p-8">
-            </div>
-            <div class="flip-card-back glass rounded-3xl flex items-center justify-center">
-              <p class="text-2xl md:text-4xl font-bold text-white">Node.js</p>
-            </div>
-          </div>
+        <div class="glass rounded-3xl p-4 h-32 flex items-center justify-center">
+          <img src="./images/backend/node.jpg" class="max-h-full object-contain" />
         </div>
-
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front glass rounded-3xl overflow-hidden">
-              <img src="./images/backend/laravel.png" class="w-full h-full object-contain p-6 md:p-8">
-            </div>
-            <div class="flip-card-back glass rounded-3xl flex items-center justify-center">
-              <p class="text-2xl md:text-4xl font-bold text-white">Laravel</p>
-            </div>
-          </div>
+        <div class="glass rounded-3xl p-4 h-32 flex items-center justify-center">
+          <img src="./images/backend/laravel.png" class="max-h-full object-contain" />
         </div>
-
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front glass rounded-3xl overflow-hidden">
-              <img src="./images/backend/nest.jpg" class="w-full h-full object-contain p-6 md:p-8">
-            </div>
-            <div class="flip-card-back glass rounded-3xl flex items-center justify-center">
-              <p class="text-xl md:text-4xl font-bold text-white">JavaScript / TypeScript</p>
-            </div>
-          </div>
+        <div class="glass rounded-3xl p-4 h-32 flex items-center justify-center">
+          <img src="./images/backend/nest.jpg" class="max-h-full object-contain" />
         </div>
-
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front glass rounded-3xl overflow-hidden">
-              <img src="./images/backend/mysql.jpg" class="w-full h-full object-contain p-6 md:p-8">
-            </div>
-            <div class="flip-card-back glass rounded-3xl flex items-center justify-center">
-              <p class="text-2xl md:text-4xl font-bold text-white">MySQL</p>
-            </div>
-          </div>
+        <div class="glass rounded-3xl p-4 h-32 flex items-center justify-center">
+          <img src="./images/backend/mysql.jpg" class="max-h-full object-contain" />
         </div>
-
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front glass rounded-3xl overflow-hidden">
-              <img src="./images/backend/nosql.jpg" class="w-full h-full object-contain p-6 md:p-8">
-            </div>
-            <div class="flip-card-back glass rounded-3xl flex items-center justify-center">
-              <p class="text-2xl md:text-4xl font-bold text-white">NoSQL</p>
-            </div>
-          </div>
+        <div class="glass rounded-3xl p-4 h-32 flex items-center justify-center">
+          <img src="./images/backend/nosql.jpg" class="max-h-full object-contain" />
         </div>
-
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front glass rounded-3xl overflow-hidden">
-              <img src="./images/backend/git.png" class="w-full h-full object-contain p-6 md:p-8">
-            </div>
-            <div class="flip-card-back glass rounded-3xl flex items-center justify-center">
-              <p class="text-2xl md:text-4xl font-bold text-white">Git</p>
-            </div>
-          </div>
+        <div class="glass rounded-3xl p-4 h-32 flex items-center justify-center">
+          <img src="./images/backend/git.png" class="max-h-full object-contain" />
         </div>
-
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front glass rounded-3xl overflow-hidden">
-              <img src="./images/backend/docker.jpg" class="w-full h-full object-contain p-6 md:p-8">
-            </div>
-            <div class="flip-card-back glass rounded-3xl flex items-center justify-center">
-              <p class="text-2xl md:text-4xl font-bold text-white">Docker</p>
-            </div>
-          </div>
+        <div class="glass rounded-3xl p-4 h-32 flex items-center justify-center">
+          <img src="./images/backend/docker.jpg" class="max-h-full object-contain" />
         </div>
-
       </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="py-20 md:py-24">
-    <div class="max-w-4xl mx-auto text-center px-4 sm:px-6">
-      <h2 class="text-3xl md:text-5xl font-bold mb-8">تواصل معي</h2>
-      <div class="flex justify-center gap-8 md:gap-10 text-4xl md:text-5xl">
+  <section id="contact" class="py-20">
+    <div class="max-w-4xl mx-auto text-center px-4 md:px-6">
+      <h2 class="section-title text-4xl md:text-5xl font-bold mb-8">تواصل معي</h2>
+      <div class="flex justify-center gap-8 text-4xl md:text-5xl">
         <a href="https://wa.me/963931445568" target="_blank" class="hover:text-green-400 transition">
           <i class="fab fa-whatsapp"></i>
         </a>
-
         <a href="mailto:ahmadhajnajeeb45@gmail.com" class="hover:text-blue-400 transition">
           <i class="fas fa-envelope"></i>
         </a>
@@ -311,22 +223,29 @@
     </div>
   </section>
 
-  <footer class="py-8 md:py-12 text-center text-sm md:text-base text-gray-500 border-t border-white/10 px-4">
+  <footer class="py-8 text-center text-gray-500 border-t border-white/10 text-sm md:text-base px-4">
     © 2026 أحمد حاج نجيب • Built with ❤️ and Tailwind
   </footer>
 
   <script>
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburger = document.getElementById("hamburger");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const mobileLinks = mobileMenu.querySelectorAll("a");
 
-    hamburger.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-      hamburger.innerHTML = mobileMenu.classList.contains('hidden') ?
-        '<i class="fas fa-bars"></i>' :
-        '<i class="fas fa-times"></i>';
+    hamburger.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+      hamburger.innerHTML = mobileMenu.classList.contains("hidden")
+        ? '<i class="fas fa-bars"></i>'
+        : '<i class="fas fa-times"></i>';
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+        hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+      });
     });
   </script>
-
 </body>
 
 </html>
