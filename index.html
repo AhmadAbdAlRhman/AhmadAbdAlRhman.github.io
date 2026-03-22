@@ -1,80 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>أحمد حاج نجيب | مطور برمجيات</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    body { font-family: 'Segoe UI', system-ui; }
+    .glass { background: rgba(255,255,255,0.1); backdrop-filter: blur(16px); }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-slate-950 to-zinc-900 text-white min-h-screen">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./index.css">
-        <title>Ahmad Haj Najeeb</title>
-    </head>
+  <!-- Hero -->
+  <section class="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <div class="text-center z-10">
+      <img src="رابط-صورتك.jpg" class="w-48 h-48 mx-auto rounded-3xl border-4 border-blue-500 shadow-2xl">
+      <h1 class="text-6xl font-bold mt-6">أحمد حاج نجيب</h1>
+      <p class="text-2xl text-blue-400 mt-3">مطور Node.js & Backend | طالب علوم حاسوب</p>
+      <div class="mt-10 flex gap-6 justify-center">
+        <a href="#" class="px-8 py-4 bg-blue-600 rounded-2xl hover:bg-blue-700 transition">تحميل السيرة الذاتية</a>
+        <a href="#projects" class="px-8 py-4 border border-white rounded-2xl hover:bg-white hover:text-black transition">شاهد مشاريعي</a>
+      </div>
+    </div>
+  </section>
 
-    <body>
+  <!-- Skills -->
+  <section class="py-20 px-10">
+    <h2 class="text-4xl font-bold text-center mb-12">المهارات</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+      <div class="glass p-8 rounded-3xl text-center hover:scale-105 transition">Node.js</div>
+      <div class="glass p-8 rounded-3xl text-center hover:scale-105 transition">Laravel</div>
+      <div class="glass p-8 rounded-3xl text-center hover:scale-105 transition">JavaScript</div>
+      <div class="glass p-8 rounded-3xl text-center hover:scale-105 transition">PHP</div>
+    </div>
+  </section>
 
-        <header>
-            <nav>
+  <!-- Projects (أضف مشاريعك الحقيقية هنا) -->
+  <section id="projects" class="py-20 bg-black/30">
+    <h2 class="text-4xl font-bold text-center mb-12">مشاريعي</h2>
+    <!-- أضف بطاقات مشاريع هنا -->
+  </section>
 
-                <div class="logo">Ahmad Haj Najeeb</div>
-
-                <div class="social-media">
-
-                    <div class="key">social media</div>
-
-                    <div class="links">
-                        <a href="https://www.facebook.com/AhmadHajNajeeb">Facebook</a>
-                        <a href="https://www.linkedin.com/in/ahmad-abdalrman-70699b237/">Linked-In</a>
-                        <a href="https://github.com/AhmadAbdAlRhman">GitHub</a>
-                        <a href="https://t.me/ahmad_AbdAlRhman">Telegram</a>
-                    </div>
-                </div>
-
-            </nav>
-        </header>
-
-        <main>
-            <section class="main_section">
-
-                <img class="personal_photo"src="./editing.jpg" width="350px" height="350px" />
-
-                <div class="skills">
-                    <h2>Ahmad Haj Najeeb</h2>
-                    <br />
-                    <p>Computer Science student and fresh Node JS developer</p>
-                    <p>Computer Science & Backend development big fan</p>
-                    <p>Looking forward to work with fullstack technologies</p>
-                </div>
-
-            </section>
-
-            <section class="technologies">
-
-                <h3>Programming languages</h3>
-                <div class="languages">
-                    <img src="./images/languages/javascript.png" width="200px" height="276px" />
-                    <img src="./images/languages/php.png" width="200px" height="276px" />
-                    <img src="./images/languages/java.png" width="200px" height="276px" />
-                </div>
-
-                <h3>Backend technologies</h3>
-                <div class="backend">
-                    <img src="./images/backend/node.png" width="200px" height="276px" />
-                    <img src="./images/backend/MySQL.png" width="200px" height="276px" />
-                    <img src="./images/backend/laravel.png" width="200px" height="276px" />
-                </div>
-
-                <h3>Others</h3>
-                <div class="others">
-                    <img src="./images/others/HTML5.png" width="200px" height="276px" />
-                    <img src="./images/others/CSS3.png" width="200px" height="276px" />
-                    <img src="./images/others/bootstrap.png" width="200px" height="276px" />
-                </div>
-
-            </section>
-        </main>
-            
-        <footer>
-
-        </footer>
-        
-    </body>
-
+  <!-- Footer -->
+  <footer class="py-10 text-center border-t border-white/10">
+    <p>© 2026 أحمد حاج نجيب • Made with ❤️ and Tailwind</p>
+  </footer>
+</body>
 </html>
