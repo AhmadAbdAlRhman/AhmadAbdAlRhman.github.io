@@ -3,49 +3,143 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>أحمد حاج نجيب | مطور برمجيات</title>
+  <title>أحمد حاج نجيب | مطور Backend</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <style>
-    body { font-family: 'Segoe UI', system-ui; }
-    .glass { background: rgba(255,255,255,0.1); backdrop-filter: blur(16px); }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; }
+    .glass { background: rgba(255,255,255,0.08); backdrop-filter: blur(20px); }
+    .card-hover { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+    .card-hover:hover { transform: translateY(-12px) scale(1.03); box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4); }
+    .hero-bg { background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%); }
   </style>
 </head>
-<body class="bg-gradient-to-br from-slate-950 to-zinc-900 text-white min-h-screen">
+<body class="bg-zinc-950 text-white">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full z-50 glass border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
+      <h2 class="text-2xl font-bold text-blue-400">أحمد حاج نجيب</h2>
+      <div class="flex gap-8 text-lg">
+        <a href="#about" class="hover:text-blue-400 transition">عني</a>
+        <a href="#skills" class="hover:text-blue-400 transition">مهاراتي</a>
+        <a href="#projects" class="hover:text-blue-400 transition">مشاريعي</a>
+        <a href="#contact" class="hover:text-blue-400 transition">تواصل</a>
+      </div>
+    </div>
+  </nav>
 
   <!-- Hero -->
-  <section class="min-h-screen flex items-center justify-center relative overflow-hidden">
-    <div class="text-center z-10">
-      <img src="رابط-صورتك.jpg" class="w-48 h-48 mx-auto rounded-3xl border-4 border-blue-500 shadow-2xl">
-      <h1 class="text-6xl font-bold mt-6">أحمد حاج نجيب</h1>
-      <p class="text-2xl text-blue-400 mt-3">مطور Node.js & Backend | طالب علوم حاسوب</p>
-      <div class="mt-10 flex gap-6 justify-center">
-        <a href="#" class="px-8 py-4 bg-blue-600 rounded-2xl hover:bg-blue-700 transition">تحميل السيرة الذاتية</a>
-        <a href="#projects" class="px-8 py-4 border border-white rounded-2xl hover:bg-white hover:text-black transition">شاهد مشاريعي</a>
+  <section class="hero-bg min-h-screen flex items-center justify-center pt-20">
+    <div class="text-center px-6 max-w-4xl">
+      <img src="https://avatars.githubusercontent.com/u/أنت-هنا" 
+           class="w-52 h-52 mx-auto rounded-3xl border-8 border-blue-500 shadow-2xl" alt="أحمد">
+      <h1 class="text-6xl font-bold mt-8 tracking-tight">أحمد حاج نجيب</h1>
+      <p class="text-3xl text-blue-400 mt-3">مطور Node.js & Backend • طالب علوم حاسوب</p>
+      <p class="text-xl text-gray-400 mt-6 max-w-2xl mx-auto">
+        أحب بناء أنظمة قوية وتكاملات معقدة. متخصص في الـ APIs، Webhooks، Scraping، وطوابير المهام.
+      </p>
+      <div class="mt-12 flex gap-6 justify-center">
+        <a href="https://github.com/AhmadAbdAlRhman" 
+           class="px-10 py-5 bg-white text-black font-bold rounded-2xl hover:bg-blue-400 hover:text-white transition text-lg flex items-center gap-3">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/ahmadhajnajeeb" 
+           class="px-10 py-5 border-2 border-white font-bold rounded-2xl hover:bg-white hover:text-black transition text-lg flex items-center gap-3">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-24 bg-black/40">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-5xl font-bold text-center mb-12">من أنا؟</h2>
+      <div class="glass rounded-3xl p-12 text-lg leading-relaxed">
+        طالب علوم حاسوب ومطور Backend طموح. أعشق بناء الحلول التقنية المعقدة مثل تكاملات سلة وزد، 
+        أنظمة الدفع، وأدوات السحب الآمن للبيانات. أعمل حالياً على مشاريع SaaS متقدمة باستخدام Next.js، 
+        Prisma، وCoolify.
       </div>
     </div>
   </section>
 
   <!-- Skills -->
-  <section class="py-20 px-10">
-    <h2 class="text-4xl font-bold text-center mb-12">المهارات</h2>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-      <div class="glass p-8 rounded-3xl text-center hover:scale-105 transition">Node.js</div>
-      <div class="glass p-8 rounded-3xl text-center hover:scale-105 transition">Laravel</div>
-      <div class="glass p-8 rounded-3xl text-center hover:scale-105 transition">JavaScript</div>
-      <div class="glass p-8 rounded-3xl text-center hover:scale-105 transition">PHP</div>
+  <section id="skills" class="py-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-5xl font-bold text-center mb-16">المهارات التقنية</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="glass rounded-3xl p-10 text-center card-hover">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/2560px-Node.js_logo.svg.png" class="h-16 mx-auto mb-6">
+          <p class="text-2xl font-bold">Node.js</p>
+        </div>
+        <div class="glass rounded-3xl p-10 text-center card-hover">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel-logo.svg/2560px-Laravel-logo.svg.png" class="h-16 mx-auto mb-6">
+          <p class="text-2xl font-bold">Laravel</p>
+        </div>
+        <div class="glass rounded-3xl p-10 text-center card-hover">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/640px-JavaScript-logo.png" class="h-16 mx-auto mb-6">
+          <p class="text-2xl font-bold">JavaScript / TypeScript</p>
+        </div>
+        <div class="glass rounded-3xl p-10 text-center card-hover">
+          <img src="https://www.prisma.io/images/prisma-logo-dark.svg" class="h-16 mx-auto mb-6">
+          <p class="text-2xl font-bold">Prisma</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Projects (أضف مشاريعك الحقيقية هنا) -->
-  <section id="projects" class="py-20 bg-black/30">
-    <h2 class="text-4xl font-bold text-center mb-12">مشاريعي</h2>
-    <!-- أضف بطاقات مشاريع هنا -->
+  <!-- Projects -->
+  <section id="projects" class="py-24 bg-black/40">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-5xl font-bold text-center mb-16">مشاريعي البارزة</h2>
+      <div class="grid md:grid-cols-2 gap-10">
+
+        <!-- مشروع 1 -->
+        <div class="glass rounded-3xl overflow-hidden card-hover">
+          <div class="bg-gradient-to-r from-blue-600 to-purple-600 h-2"></div>
+          <div class="p-10">
+            <h3 class="text-3xl font-bold">Domination in Graphs</h3>
+            <p class="text-gray-400 mt-3">تطبيق Electron لحساب Dominating Set باستخدام Greedy و Improved Greedy + حساب تقاطعات K_n</p>
+            <div class="mt-6 flex gap-3">
+              <span class="bg-white/10 px-5 py-2 rounded-full text-sm">Graphology</span>
+              <span class="bg-white/10 px-5 py-2 rounded-full text-sm">Cytoscape.js</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- مشروع 2 -->
+        <div class="glass rounded-3xl overflow-hidden card-hover">
+          <div class="bg-gradient-to-r from-emerald-500 to-cyan-500 h-2"></div>
+          <div class="p-10">
+            <h3 class="text-3xl font-bold">LinkedIn Services Automation</h3>
+            <p class="text-gray-400 mt-3">نظام ربط آلي مع LinkedIn Services + Webhooks + Queue System</p>
+            <div class="mt-6 flex gap-3">
+              <span class="bg-white/10 px-5 py-2 rounded-full text-sm">Next.js</span>
+              <span class="bg-white/10 px-5 py-2 rounded-full text-sm">BullMQ</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="py-10 text-center border-t border-white/10">
-    <p>© 2026 أحمد حاج نجيب • Made with ❤️ and Tailwind</p>
+  <!-- Contact -->
+  <section id="contact" class="py-24">
+    <div class="max-w-4xl mx-auto text-center px-6">
+      <h2 class="text-5xl font-bold mb-8">تواصل معي</h2>
+      <div class="flex justify-center gap-8 text-4xl">
+        <a href="https://github.com/AhmadAbdAlRhman" class="hover:text-blue-400 transition"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/ahmadhajnajeeb" class="hover:text-blue-400 transition"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:ahmadhajnajeeb@gmail.com" class="hover:text-blue-400 transition"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-12 text-center text-gray-500 border-t border-white/10">
+    © 2026 أحمد حاج نجيب • Built with ❤️ and Tailwind
   </footer>
+
 </body>
 </html>
