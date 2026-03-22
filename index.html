@@ -1,19 +1,106 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="ltr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>أحمد حاج نجيب | مطور Backend</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <style>
-    body { font-family: 'Segoe UI', system-ui, sans-serif; }
-    .glass { background: rgba(255,255,255,0.08); backdrop-filter: blur(20px); }
-    .card-hover { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
-    .card-hover:hover { transform: translateY(-12px) scale(1.03); box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4); }
-    .hero-bg { background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%); }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(20px);
+    }
+
+    .card-hover {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .card-hover:hover {
+      transform: translateY(-12px) scale(1.03);
+      box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
+    }
+
+    .hero-bg {
+      background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%);
+    }
+
+    .flip-card {
+      perspective: 1000px;
+      height: 150px;
+    }
+    .node{
+      background-image: url('./images//backend/node.jpg');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    .laravel{
+      background-image: url('./images//backend/laravel.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    .ts{
+      background-image: url('./images//backend/nest.jpg');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    .mysql{
+      background-image: url('./images//backend/mysql.jpg');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    .nosql{
+      background-image: url('./images//backend/nosql.jpg');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    .git{
+      background-image: url('./images//backend/git.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    .docker{
+      background-image: url('./images//backend/docker.jpg');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .flip-card-back {
+      transform: rotateY(180deg);
+    }
   </style>
 </head>
+
 <body class="bg-zinc-950 text-white">
 
   <!-- Navbar -->
@@ -32,20 +119,20 @@
   <!-- Hero -->
   <section class="hero-bg min-h-screen flex items-center justify-center pt-20">
     <div class="text-center px-6 max-w-4xl">
-      <img src="https://avatars.githubusercontent.com/u/أنت-هنا" 
-           class="w-52 h-52 mx-auto rounded-3xl border-8 border-blue-500 shadow-2xl" alt="أحمد">
+      <img src="./5.jpg" class="w-52 h-52 mx-auto rounded-3xl border-8 border-blue-500 shadow-2xl" alt="أحمد">
       <h1 class="text-6xl font-bold mt-8 tracking-tight">أحمد حاج نجيب</h1>
-      <p class="text-3xl text-blue-400 mt-3">مطور Node.js & Backend • طالب علوم حاسوب</p>
-      <p class="text-xl text-gray-400 mt-6 max-w-2xl mx-auto">
-        أحب بناء أنظمة قوية وتكاملات معقدة. متخصص في الـ APIs، Webhooks، Scraping، وطوابير المهام.
+      <p class="text-3xl text-blue-400 mt-3">مطور Node.js & Backend • مهندس ملعوماتية</p>
+      <p class="text-xl text-gray-400 mt-6 max-w-2xl mx-auto leading-relaxed">
+        لدي خبرة في بناء أنظمة قوية وتكاملات معقدة.<br>
+        متخصص في الـ APIs، Webhooks، Scraping، وطوابير المهام.
       </p>
       <div class="mt-12 flex gap-6 justify-center">
-        <a href="https://github.com/AhmadAbdAlRhman" 
-           class="px-10 py-5 bg-white text-black font-bold rounded-2xl hover:bg-blue-400 hover:text-white transition text-lg flex items-center gap-3">
+        <a href="https://github.com/AhmadAbdAlRhman"
+          class="px-10 py-5 bg-white text-black font-bold rounded-2xl hover:bg-blue-400 hover:text-white transition text-lg flex items-center gap-3">
           <i class="fab fa-github"></i> GitHub
         </a>
-        <a href="https://www.linkedin.com/in/ahmadhajnajeeb" 
-           class="px-10 py-5 border-2 border-white font-bold rounded-2xl hover:bg-white hover:text-black transition text-lg flex items-center gap-3">
+        <a href="https://www.linkedin.com/in/ahmadhajnajeeb"
+          class="px-10 py-5 border-2 border-white font-bold rounded-2xl hover:bg-white hover:text-black transition text-lg flex items-center gap-3">
           <i class="fab fa-linkedin"></i> LinkedIn
         </a>
       </div>
@@ -57,9 +144,13 @@
     <div class="max-w-4xl mx-auto px-6">
       <h2 class="text-5xl font-bold text-center mb-12">من أنا؟</h2>
       <div class="glass rounded-3xl p-12 text-lg leading-relaxed">
-        طالب علوم حاسوب ومطور Backend طموح. أعشق بناء الحلول التقنية المعقدة مثل تكاملات سلة وزد، 
-        أنظمة الدفع، وأدوات السحب الآمن للبيانات. أعمل حالياً على مشاريع SaaS متقدمة باستخدام Next.js، 
-        Prisma، وCoolify.
+        Backend Developer with a strong passion for building solid, scalable, and performant systems.Initially
+        explored frontend development, but quickly discovered my true calling in backend engineering, particularly
+        with Node.js and Laravel.I specialize in designing and implementing reliable RESTful APIs, managing
+        complex databases, crafting well-structured ERD diagrams, and ensuring smooth, maintainable system
+        architecture. Eager to join a collaborative and high-performing team where I can contribute to impactful
+        features, deliver high-quality code, and continue growing alongside talented professionals dedicated to
+        creating exceptional software.
       </div>
     </div>
   </section>
@@ -68,23 +159,71 @@
   <section id="skills" class="py-24">
     <div class="max-w-6xl mx-auto px-6">
       <h2 class="text-5xl font-bold text-center mb-16">المهارات التقنية</h2>
+
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-        <div class="glass rounded-3xl p-10 text-center card-hover">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/2560px-Node.js_logo.svg.png" class="h-16 mx-auto mb-6">
-          <p class="text-2xl font-bold">Node.js</p>
+
+        <!-- Card 1: Node.js -->
+        <div class="flip-card">
+          <div class="node flip-card-inner">
+            <div class="flip-card-back glass rounded-3xl p-10 flex items-center justify-center">
+              <p class="text-3xl font-bold text-white">Node.js</p>
+            </div>
+          </div>
         </div>
-        <div class="glass rounded-3xl p-10 text-center card-hover">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel-logo.svg/2560px-Laravel-logo.svg.png" class="h-16 mx-auto mb-6">
-          <p class="text-2xl font-bold">Laravel</p>
+
+        <!-- Card 2: Laravel -->
+        <div class="flip-card">
+          <div class="laravel flip-card-inner">
+            <div class="flip-card-back glass rounded-3xl p-10 flex items-center justify-center">
+              <p class="text-3xl font-bold text-white">Laravel</p>
+            </div>
+          </div>
         </div>
-        <div class="glass rounded-3xl p-10 text-center card-hover">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/640px-JavaScript-logo.png" class="h-16 mx-auto mb-6">
-          <p class="text-2xl font-bold">JavaScript / TypeScript</p>
+
+        <!-- Card 3: JavaScript / TypeScript -->
+        <div class="flip-card">
+          <div class="ts flip-card-inner">
+            <div class="flip-card-back glass rounded-3xl p-10 flex items-center justify-center">
+              <p class="text-3xl font-bold text-white">JavaScript / TypeScript</p>
+            </div>
+          </div>
         </div>
-        <div class="glass rounded-3xl p-10 text-center card-hover">
-          <img src="https://www.prisma.io/images/prisma-logo-dark.svg" class="h-16 mx-auto mb-6">
-          <p class="text-2xl font-bold">Prisma</p>
+
+        <!-- Card 4: MYSQL -->
+        <div class="flip-card">
+          <div class="mysql flip-card-inner">
+            <div class="flip-card-back glass rounded-3xl p-10 flex items-center justify-center">
+              <p class="text-3xl font-bold text-white">MYSQL</p>
+            </div>
+          </div>
         </div>
+        
+        <!-- Card 5: NOSQL -->
+        <div class="flip-card">
+          <div class="nosql flip-card-inner">
+            <div class="flip-card-back glass rounded-3xl p-10 flex items-center justify-center">
+              <p class="text-3xl font-bold text-white">NOSQL</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Card 5: GIT -->
+        <div class="flip-card">
+          <div class="git flip-card-inner">
+            <div class="flip-card-back glass rounded-3xl p-10 flex items-center justify-center">
+              <p class="text-3xl font-bold text-white">GIT</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 5: Docker -->
+        <div class="flip-card">
+          <div class="docker flip-card-inner">
+            <div class="flip-card-back glass rounded-3xl p-10 flex items-center justify-center">
+              <p class="text-3xl font-bold text-white">DOCKER</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -100,7 +239,8 @@
           <div class="bg-gradient-to-r from-blue-600 to-purple-600 h-2"></div>
           <div class="p-10">
             <h3 class="text-3xl font-bold">Domination in Graphs</h3>
-            <p class="text-gray-400 mt-3">تطبيق Electron لحساب Dominating Set باستخدام Greedy و Improved Greedy + حساب تقاطعات K_n</p>
+            <p class="text-gray-400 mt-3">تطبيق Electron لحساب Dominating Set باستخدام Greedy و Improved Greedy + حساب
+              تقاطعات K_n</p>
             <div class="mt-6 flex gap-3">
               <span class="bg-white/10 px-5 py-2 rounded-full text-sm">Graphology</span>
               <span class="bg-white/10 px-5 py-2 rounded-full text-sm">Cytoscape.js</span>
@@ -129,10 +269,27 @@
   <section id="contact" class="py-24">
     <div class="max-w-4xl mx-auto text-center px-6">
       <h2 class="text-5xl font-bold mb-8">تواصل معي</h2>
-      <div class="flex justify-center gap-8 text-4xl">
-        <a href="https://github.com/AhmadAbdAlRhman" class="hover:text-blue-400 transition"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/ahmadhajnajeeb" class="hover:text-blue-400 transition"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:ahmadhajnajeeb@gmail.com" class="hover:text-blue-400 transition"><i class="fas fa-envelope"></i></a>
+      <div class="flex justify-center gap-10 text-5xl">
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/963931445568" target="_blank" class="hover:text-green-400 transition">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+
+        <!-- GitHub -->
+        <!-- <a href="https://github.com/AhmadAbdAlRhman" class="hover:text-blue-400 transition">
+          <i class="fab fa-github"></i>
+        </a> -->
+
+        <!-- LinkedIn -->
+        <!-- <a href="https://www.linkedin.com/in/ahmadhajnajeeb" class="hover:text-blue-400 transition">
+          <i class="fab fa-linkedin"></i>
+        </a> -->
+
+        <!-- Email -->
+        <a href="mailto:ahmadhajnajeeb45@gmail.com" class="hover:text-blue-400 transition">
+          <i class="fas fa-envelope"></i>
+        </a>
       </div>
     </div>
   </section>
@@ -142,4 +299,5 @@
   </footer>
 
 </body>
+
 </html>
