@@ -35,41 +35,7 @@
       perspective: 1000px;
       height: 150px;
     }
-    .node{
-      background-image: url('./images//backend/node.jpg');
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
-    .laravel{
-      background-image: url('./images//backend/laravel.png');
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
-    .ts{
-      background-image: url('./images//backend/nest.jpg');
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
-    .mysql{
-      background-image: url('./images//backend/mysql.jpg');
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
-    .nosql{
-      background-image: url('./images//backend/nosql.jpg');
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
-    .git{
-      background-image: url('./images//backend/git.png');
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
-    .docker{
-      background-image: url('./images//backend/docker.jpg');
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
+
     .flip-card-inner {
       position: relative;
       width: 100%;
@@ -106,8 +72,28 @@
   <!-- Navbar -->
   <nav class="fixed top-0 w-full z-50 glass border-b border-white/10">
     <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
+
+      <!-- Logo -->
       <h2 class="text-2xl font-bold text-blue-400">أحمد حاج نجيب</h2>
-      <div class="flex gap-8 text-lg">
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex gap-8 text-lg">
+        <a href="#about" class="hover:text-blue-400 transition">عني</a>
+        <a href="#skills" class="hover:text-blue-400 transition">مهاراتي</a>
+        <a href="#projects" class="hover:text-blue-400 transition">مشاريعي</a>
+        <a href="#contact" class="hover:text-blue-400 transition">تواصل</a>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <button id="hamburger" class="md:hidden text-3xl text-white">
+        <i class="fas fa-bars"></i>
+      </button>
+
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-zinc-950/95 backdrop-blur-lg border-t border-white/10">
+      <div class="flex flex-col py-6 px-8 text-xl space-y-6">
         <a href="#about" class="hover:text-blue-400 transition">عني</a>
         <a href="#skills" class="hover:text-blue-400 transition">مهاراتي</a>
         <a href="#projects" class="hover:text-blue-400 transition">مشاريعي</a>
@@ -162,101 +148,86 @@
 
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
 
-        <!-- Card 1: Node.js -->
+        <!-- Node.js -->
         <div class="flip-card">
-          <div class="node flip-card-inner">
-            <div class="flip-card-back glass rounded-3xl p-10 flex items-center justify-center">
-              <p class="text-3xl font-bold text-white">Node.js</p>
+          <div class="flip-card-inner">
+            <div class="flip-card-front glass rounded-3xl overflow-hidden">
+              <img src="./images/backend/node.jpg" class="w-full h-full object-contain p-8">
+            </div>
+            <div class="flip-card-back glass rounded-3xl flex items-center justify-center">
+              <p class="text-4xl font-bold text-white">Node.js</p>
             </div>
           </div>
         </div>
 
-        <!-- Card 2: Laravel -->
+        <!-- Laravel -->
         <div class="flip-card">
-          <div class="laravel flip-card-inner">
-            <div class="flip-card-back glass rounded-3xl p-10 flex items-center justify-center">
-              <p class="text-3xl font-bold text-white">Laravel</p>
+          <div class="flip-card-inner">
+            <div class="flip-card-front glass rounded-3xl overflow-hidden">
+              <img src="./images/backend/laravel.png" class="w-full h-full object-contain p-8">
+            </div>
+            <div class="flip-card-back glass rounded-3xl flex items-center justify-center">
+              <p class="text-4xl font-bold text-white">Laravel</p>
             </div>
           </div>
         </div>
 
-        <!-- Card 3: JavaScript / TypeScript -->
+        <!-- JavaScript / TypeScript -->
         <div class="flip-card">
-          <div class="ts flip-card-inner">
-            <div class="flip-card-back glass rounded-3xl p-10 flex items-center justify-center">
-              <p class="text-3xl font-bold text-white">JavaScript / TypeScript</p>
+          <div class="flip-card-inner">
+            <div class="flip-card-front glass rounded-3xl overflow-hidden">
+              <img src="./images/backend/nest.jpg" class="w-full h-full object-contain p-8">
+            </div>
+            <div class="flip-card-back glass rounded-3xl flex items-center justify-center">
+              <p class="text-4xl font-bold text-white">JavaScript / TypeScript</p>
             </div>
           </div>
         </div>
 
-        <!-- Card 4: MYSQL -->
+        <!-- MySQL -->
         <div class="flip-card">
-          <div class="mysql flip-card-inner">
-            <div class="flip-card-back glass rounded-3xl p-10 flex items-center justify-center">
-              <p class="text-3xl font-bold text-white">MYSQL</p>
+          <div class="flip-card-inner">
+            <div class="flip-card-front glass rounded-3xl overflow-hidden">
+              <img src="./images/backend/mysql.jpg" class="w-full h-full object-contain p-8">
             </div>
-          </div>
-        </div>
-        
-        <!-- Card 5: NOSQL -->
-        <div class="flip-card">
-          <div class="nosql flip-card-inner">
-            <div class="flip-card-back glass rounded-3xl p-10 flex items-center justify-center">
-              <p class="text-3xl font-bold text-white">NOSQL</p>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Card 5: GIT -->
-        <div class="flip-card">
-          <div class="git flip-card-inner">
-            <div class="flip-card-back glass rounded-3xl p-10 flex items-center justify-center">
-              <p class="text-3xl font-bold text-white">GIT</p>
-            </div>
-          </div>
-        </div>
-        <!-- Card 5: Docker -->
-        <div class="flip-card">
-          <div class="docker flip-card-inner">
-            <div class="flip-card-back glass rounded-3xl p-10 flex items-center justify-center">
-              <p class="text-3xl font-bold text-white">DOCKER</p>
+            <div class="flip-card-back glass rounded-3xl flex items-center justify-center">
+              <p class="text-4xl font-bold text-white">MySQL</p>
             </div>
           </div>
         </div>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects" class="py-24 bg-black/40">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-5xl font-bold text-center mb-16">مشاريعي البارزة</h2>
-      <div class="grid md:grid-cols-2 gap-10">
-
-        <!-- مشروع 1 -->
-        <div class="glass rounded-3xl overflow-hidden card-hover">
-          <div class="bg-gradient-to-r from-blue-600 to-purple-600 h-2"></div>
-          <div class="p-10">
-            <h3 class="text-3xl font-bold">Domination in Graphs</h3>
-            <p class="text-gray-400 mt-3">تطبيق Electron لحساب Dominating Set باستخدام Greedy و Improved Greedy + حساب
-              تقاطعات K_n</p>
-            <div class="mt-6 flex gap-3">
-              <span class="bg-white/10 px-5 py-2 rounded-full text-sm">Graphology</span>
-              <span class="bg-white/10 px-5 py-2 rounded-full text-sm">Cytoscape.js</span>
+        <!-- NoSQL -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front glass rounded-3xl overflow-hidden">
+              <img src="./images/backend/nosql.jpg" class="w-full h-full object-contain p-8">
+            </div>
+            <div class="flip-card-back glass rounded-3xl flex items-center justify-center">
+              <p class="text-4xl font-bold text-white">NoSQL</p>
             </div>
           </div>
         </div>
 
-        <!-- مشروع 2 -->
-        <div class="glass rounded-3xl overflow-hidden card-hover">
-          <div class="bg-gradient-to-r from-emerald-500 to-cyan-500 h-2"></div>
-          <div class="p-10">
-            <h3 class="text-3xl font-bold">LinkedIn Services Automation</h3>
-            <p class="text-gray-400 mt-3">نظام ربط آلي مع LinkedIn Services + Webhooks + Queue System</p>
-            <div class="mt-6 flex gap-3">
-              <span class="bg-white/10 px-5 py-2 rounded-full text-sm">Next.js</span>
-              <span class="bg-white/10 px-5 py-2 rounded-full text-sm">BullMQ</span>
+        <!-- Git -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front glass rounded-3xl overflow-hidden">
+              <img src="./images/backend/git.png" class="w-full h-full object-contain p-8">
+            </div>
+            <div class="flip-card-back glass rounded-3xl flex items-center justify-center">
+              <p class="text-4xl font-bold text-white">Git</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Docker -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front glass rounded-3xl overflow-hidden">
+              <img src="./images/backend/docker.jpg" class="w-full h-full object-contain p-8">
+            </div>
+            <div class="flip-card-back glass rounded-3xl flex items-center justify-center">
+              <p class="text-4xl font-bold text-white">Docker</p>
             </div>
           </div>
         </div>
@@ -294,10 +265,20 @@
     </div>
   </section>
 
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      hamburger.innerHTML = mobileMenu.classList.contains('hidden') ?
+        '<i class="fas fa-bars"></i>' :
+        '<i class="fas fa-times"></i>';
+    });
+  </script>
   <footer class="py-12 text-center text-gray-500 border-t border-white/10">
     © 2026 أحمد حاج نجيب • Built with ❤️ and Tailwind
   </footer>
-
 </body>
 
 </html>
